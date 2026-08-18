@@ -71,6 +71,11 @@ When you open Accesstive App, your server fetches UI assets from app.accesstive.
 
 Hard-refresh the Accesstive App page, wait for the UI to finish loading, then try again. If it persists, use **Manual** install or check that JavaScript is not blocked in wp-admin.
 
+== Upgrade Notice ==
+
+= 1.0.0 =
+Initial release of Accesstive App for WordPress.
+
 == Changelog ==
 
 = 1.0.0 =
