@@ -1,4 +1,4 @@
-=== Accesstive: Web Accessibility Compliance Management by Accesstive: WCAG, ADA, EAA & BFSG Support ===
+=== Web Accessibility Compliance Management by Accesstive: WCAG, ADA, EAA & BFSG Support ===
 Contributors: accesstive
 Tags: accessibility, wcag, ada-compliance, accessibility-checker, eaa
 Requires at least: 5.8
