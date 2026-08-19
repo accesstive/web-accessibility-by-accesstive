@@ -3,7 +3,7 @@
  * Plugin Name: Web Accessibility Compliance Management by Accesstive: WCAG, ADA, EAA & BFSG Support
  * Plugin URI: https://accesstive.com/integration/wordpress/
  * Description: Find, fix and prove website accessibility with a WCAG 2.2 checker and free toolkit. Support ADA, AODA, EAA & BFSG.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Requires at least: 5.8
  * Requires PHP: 7.4
  * Author: Accesstive
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ACCESSTIVE_APP_VERSION', '1.0.1' );
+define( 'ACCESSTIVE_APP_VERSION', '1.0.2' );
 define( 'ACCESSTIVE_APP_FILE', __FILE__ );
 define( 'ACCESSTIVE_APP_PATH', plugin_dir_path( __FILE__ ) );
 define( 'ACCESSTIVE_APP_DEFAULT_URL', 'https://app.accesstive.com/' );
