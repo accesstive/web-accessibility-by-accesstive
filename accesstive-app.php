@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Accesstive App
+ * Plugin Name: Accesstive: Web Accessibility Compliance Management by Accesstive: WCAG, ADA, EAA & BFSG Support
  * Plugin URI: https://accesstive.com/integration/wordpress/
- * Description: Connect WordPress to Accesstive — manage accessibility from your admin and install the visitor toolkit in one click.
+ * Description: Find, fix and prove website accessibility with a WCAG 2.2 checker and free toolkit. Support ADA, AODA, EAA & BFSG.
  * Version: 1.0.0
  * Requires at least: 5.8
  * Requires PHP: 7.4
@@ -106,8 +106,8 @@ final class Accesstive_App_Plugin {
 
 	public function register_admin_menu() {
 		add_menu_page(
-			__( 'Accesstive App', 'web-accessibility-by-accesstive' ),
-			__( 'Accesstive App', 'web-accessibility-by-accesstive' ),
+			__( 'Accesstive', 'web-accessibility-by-accesstive' ),
+			__( 'Accesstive', 'web-accessibility-by-accesstive' ),
 			self::get_capability(),
 			'accesstive-app',
 			array( $this, 'render_admin_page' ),
@@ -167,7 +167,7 @@ final class Accesstive_App_Plugin {
 				id="accesstive-app-embed"
 				class="accesstive-app-embed"
 				role="region"
-				aria-label="<?php esc_attr_e( 'Accesstive App', 'web-accessibility-by-accesstive' ); ?>"
+				aria-label="<?php esc_attr_e( 'Accesstive', 'web-accessibility-by-accesstive' ); ?>"
 				aria-busy="true"
 			>
 				<div class="accesstive-app-loading">

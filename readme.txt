@@ -1,6 +1,6 @@
-=== Accesstive App ===
+=== Accesstive: Web Accessibility Compliance Management by Accesstive: WCAG, ADA, EAA & BFSG Support ===
 Contributors: accesstive
-Tags: accessibility, a11y, widget, admin, accesstive
+Tags: accessibility, wcag, ada-compliance, accessibility-checker, eaa
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.4
@@ -8,73 +8,196 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Connect WordPress to Accesstive — manage accessibility from your admin and install the visitor toolkit in one click.
+Find, fix and prove website accessibility with a WCAG 2.2 checker and free toolkit. Support ADA, AODA, EAA & BFSG.
 
 == Description ==
 
-**Accesstive App** brings the Accesstive dashboard into WordPress admin so site owners can set up accessibility tools without leaving wp-admin.
+**Does Accesstive help with accessibility compliance?**
 
-= Features =
+**Yes.** Accesstive helps you find accessibility issues, understand how to fix them, track remediation, monitor changes, and document your accessibility efforts. It supports accessibility efforts related to **WCAG 2.2**, **ADA**, **AODA**, **EAA**, and **BFSG**. It does not make your website compliant on its own, and no automated tool can guarantee compliance.
 
-* Accesstive admin UI embedded in WordPress (Accesstive App menu).
-* One-click **Auto install** of the Accesstive toolkit on your public site.
-* Manual install option with a copy-paste script tag.
-* Token verification against the Accesstive API before saving.
-* Frontend injection of `assistance.js` from cdn.accesstive.com after install.
+**Do I get the visitor accessibility toolkit (widget)?** **Yes, free and permanently.**
 
-= Who is this for? =
+**What else?** The free plugin includes a **WCAG 2.2** scan of up to **five pages**, with identified issues, their location, applicable WCAG criterion, and severity.
 
-Administrators who use [Accesstive](https://accesstive.com/) and want a native WordPress setup flow for the accessibility widget.
+**Website accessibility is not a one-time task.**
 
-= External services =
+Your website keeps changing. Developers update code, editors publish content, marketers add pages, and website owners launch new products and features. When your website changes, its accessibility can change too.
 
-This plugin connects to Accesstive services when an **administrator** opens the Accesstive App screen or installs the toolkit:
+We built Accesstive to help teams continuously manage website accessibility, not just install an accessibility tool and forget about it.
 
-* [app.accesstive.com](https://app.accesstive.com/) — admin UI assets (HTML/CSS/JS), allowlisted and cached on your server.
-* [dashboard.accesstive.com](https://dashboard.accesstive.com/) — token verification API.
-* [cdn.accesstive.com](https://cdn.accesstive.com/) — public `assistance.js` widget (frontend only, after install).
-* fonts.googleapis.com / fonts.gstatic.com — fonts referenced by the Accesstive UI.
+Accesstive helps you **find** accessibility issues, **fix** them, **monitor** accessibility changes, and **document** your ongoing accessibility efforts while supporting requirements related to **WCAG 2.2**, **ADA**, **EAA**, **BFSG**, and **Section 508**.
 
-Anonymous visitors do not load Accesstive admin UI assets. The public site only loads the widget script after an admin installs a verified token.
+= Find Accessibility Issues =
 
-Service terms and privacy:
+Scan your website to find accessibility issues and understand what needs attention.
 
-* [Terms of Service](https://accesstive.com/terms/)
-* [Privacy Policy](https://accesstive.com/privacy-policy/)
-* [Trust Center](https://accesstive.com/trust-center/)
+The **WCAG 2.2** accessibility checker checks areas including:
+
+* Heading structure
+* Form labels
+* Link purpose
+* ARIA usage
+* Keyboard accessibility
+* Focus visibility
+* Color contrast
+* Image alternatives
+* Media
+* Page structure
+* Other WCAG-related accessibility issues
+
+Review identified issues with their location, applicable WCAG criterion, and severity so your team can understand what needs to be addressed.
+
+= Fix Accessibility Issues =
+
+Finding an issue is only the beginning.
+
+Accesstive helps your team work through accessibility remediation with:
+
+* **AI-powered remediation guidance**
+* **Actionable recommendations** for accessibility issues
+* **Remediation tracking**
+* **Dated history** of accessibility work
+* **Human accessibility specialist** review and remediation support
+
+This allows developers, editors, marketers, website owners, agencies, and other teams involved in your website to participate in accessibility work.
+
+= Monitor Accessibility as Your Website Changes =
+
+Your website does not stay the same.
+
+Accesstive helps you continuously monitor accessibility so changes to content, design, code, products, pages, and other website elements can be reviewed for new or recurring accessibility issues.
+
+Automatic rescans and sitewide monitoring are available through the Accesstive dashboard.
+
+= Prove Your Accessibility Efforts =
+
+Accessibility work needs to be documented.
+
+Accesstive helps you keep a record of what was found, what was addressed, and how your accessibility work progresses over time.
+
+Use Accesstive for:
+
+* **Accessibility reports**
+* **Accessibility statements**
+* **Remediation history**
+* **Accessibility documentation**
+* **VPAT documentation support**
+* **Litigation support**
+
+The goal is not simply to find accessibility issues. It is to help your team document the accessibility work you have done.
+
+= Accessibility Toolkit =
+
+Accesstive includes a free visitor accessibility toolkit that gives users additional controls to personalize their browsing experience.
+
+Features include:
+
+* Font size adjustment
+* Contrast modes
+* Spacing and line height
+* Reading guide
+* Readable and dyslexia-friendly fonts
+* Animation controls
+* Large cursor
+* Keyboard shortcuts
+* Accessibility profiles
+* Other accessibility preferences
+
+The toolkit is **free permanently** and can be added automatically or placed manually on your website.
+
+The toolkit is one part of Accesstive. It does not replace accessibility testing, remediation, monitoring, or documentation.
+
+= Support for WCAG, ADA, AODA, EAA & BFSG =
+
+Accesstive supports accessibility efforts related to:
+
+* **WCAG 2.2**
+* **ADA**
+* **AODA**
+* **European Accessibility Act (EAA)**
+* **Barrierefreiheitsstärkungsgesetz (BFSG)**
+
+Requirements can vary depending on your organization, website, location, and applicable regulations.
+
+Accesstive provides tools, AI assistance, human expertise, monitoring, and documentation to help organizations continuously manage their accessibility work.
+
+= Free with the Plugin =
+
+* **Free visitor accessibility toolkit, permanently**
+* **WCAG 2.2** scan of up to **five pages**
+* Accessibility issues with location, criterion, and severity
+* Accessibility statement support
+
+For ongoing accessibility management, the Accesstive dashboard provides additional capabilities including sitewide scanning, automatic rescans, AI remediation guidance, human expert support, remediation tracking, reports, VPAT documentation support, and litigation support.
+
+New accounts receive a **15-day trial** with full access.
+
+= Disclaimer =
+
+Accesstive supports your accessibility work. It does not guarantee conformance with WCAG or compliance with the ADA, AODA, EAA, BFSG, or any other law or regulation.
+
+Automated testing cannot identify every accessibility barrier. Effective accessibility work may require automated testing, manual review, remediation, assistive technology testing, human expertise, and ongoing maintenance.
+
+= External Service =
+
+This plugin connects to Accesstive, a hosted service operated by [NITSAN](https://nitsantech.de/). Accesstive is designed with privacy and GDPR requirements in mind, with data minimization as a core principle.
+
+An Accesstive account is required for scanning and for the visitor accessibility toolkit.
+
+Your website URL and the pages you choose to scan are sent to Accesstive for processing. Accesstive does not need to collect or use visitor personal data to perform accessibility scanning.
+
+**Terms of Service:** https://accesstive.com/terms/
+
+**Privacy Policy:** https://accesstive.com/privacy-policy/
 
 == Installation ==
 
-1. Upload the `web-accessibility-by-accesstive` folder to `/wp-content/plugins/` or install the plugin through the WordPress plugins screen.
-2. Activate **Accesstive App** through the **Plugins** screen.
-3. Go to **Accesstive App** in the admin menu.
-4. Sign in with your Accesstive account and follow the setup steps.
-5. Use **Auto install** to add the toolkit to your site, or copy the manual script if you prefer.
+1. Install and activate Accesstive.
+2. Create your free Accesstive account or sign in.
+3. Answer a few questions about your website or skip it.
+4. Add the accessibility toolkit automatically or manually.
+5. Run your accessibility scan.
 
 = Requirements =
 
 * A WordPress site with outbound HTTPS access to Accesstive servers.
 * An Accesstive account.
-* `manage_options` capability (administrator) to open the app and install the toolkit.
+* Administrator access (`manage_options`) to open Accesstive and install the toolkit.
 
 == Frequently Asked Questions ==
 
-= Do I need an Accesstive account? =
+= Does Accesstive make my website ADA compliant? =
 
-Yes. The embedded admin UI is the Accesstive web application. Create an account at [accesstive.com](https://accesstive.com/) if you do not have one.
+**No.** Accesstive helps you find and fix accessibility issues, monitor changes, and document your accessibility efforts. It does not guarantee legal compliance.
 
-= What data does WordPress send to Accesstive? =
+= Is Accesstive an overlay? =
 
-When you open Accesstive App, your server fetches UI assets from app.accesstive.com. During setup, your site URL is passed so Accesstive can associate the install with your site. When you auto-install the toolkit, a widget token is verified with dashboard.accesstive.com and stored locally in WordPress options.
+**No.** Accesstive's accessibility checker analyzes your website to identify accessibility issues. The visitor toolkit is a separate feature that gives visitors additional accessibility controls.
 
-= Auto install says "Host did not respond in time" — what should I do? =
+= Is the accessibility toolkit really free? =
 
-Hard-refresh the Accesstive App page, wait for the UI to finish loading, then try again. If it persists, use **Manual** install or check that JavaScript is not blocked in wp-admin.
+**Yes.** The visitor accessibility toolkit is free permanently.
 
-== Upgrade Notice ==
+= Do I need an account? =
 
-= 1.0.0 =
-Initial release of Accesstive App for WordPress.
+**Yes.** A free Accesstive account is required to activate the toolkit and access scanning.
+
+= Why does the free scan cover five pages? =
+
+The free plugin gives you a five-page WCAG 2.2 scan so you can see real accessibility issues on your website. Sitewide scanning and ongoing monitoring are available through the Accesstive dashboard.
+
+= Does the scan update automatically? =
+
+The free plugin does not automatically rescan your website. Automatic rescans and continuous monitoring are available through the Accesstive dashboard.
+
+= Will Accesstive slow down my website? =
+
+**No.** The visitor toolkit loads asynchronously. Accessibility scanning is processed through the Accesstive service.
+
+= Can Accesstive identify every accessibility issue? =
+
+No automated accessibility tool can identify every possible accessibility barrier. Some issues require human judgment and manual review, including whether content has meaningful alternative text, whether reading order makes sense, and whether a real user can successfully complete a task.
 
 == Changelog ==
 
