@@ -5,13 +5,37 @@ on:
     branches:
       - main
 
+# Share WordPress.org SVN with the tag deploy. Parallel checkouts deadlock.
+concurrency:
+  group: wordpress-org-svn
+  cancel-in-progress: false
+
 jobs:
   trunk:
     name: Push to trunk
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # A version tag on this commit means deploy.yml already owns SVN.
+      - name: Skip if this commit is a version tag
+        id: tagged
+        run: |
+          git fetch --tags --force origin
+          for _ in 1 2 3 4 5; do
+            if git describe --exact-match --tags HEAD >/dev/null 2>&1; then
+              echo "skip=true" >> "$GITHUB_OUTPUT"
+              echo "This commit is tagged; tag deploy owns WordPress.org SVN."
+              exit 0
+            fi
+            sleep 3
+          done
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
       - name: WordPress.org plugin asset/readme update
+        if: steps.tagged.outputs.skip != 'true'
         uses: 10up/action-wordpress-plugin-asset-update@stable
         env:
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}

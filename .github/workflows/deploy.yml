@@ -5,6 +5,11 @@ on:
     tags:
       - "*"
 
+# Share WordPress.org SVN with the asset/readme updater. Parallel checkouts deadlock.
+concurrency:
+  group: wordpress-org-svn
+  cancel-in-progress: false
+
 jobs:
   tag:
     name: New tag
