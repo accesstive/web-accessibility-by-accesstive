@@ -4,7 +4,7 @@ Tags: accessibility, wcag, ada-compliance, accessibility-checker, eaa
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -200,6 +200,9 @@ The free plugin does not automatically rescan your website. Automatic rescans an
 No automated accessibility tool can identify every possible accessibility barrier. Some issues require human judgment and manual review, including whether content has meaningful alternative text, whether reading order makes sense, and whether a real user can successfully complete a task.
 
 == Changelog ==
+
+= 1.0.3 =
+* Fix Accesstive admin screen 404 after Accesstive app JavaScript rebuilds.
 
 = 1.0.2 =
 * Updated the plugin display name.

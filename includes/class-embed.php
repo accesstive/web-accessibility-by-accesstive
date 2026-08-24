@@ -13,6 +13,7 @@ final class Accesstive_App_Embed {
 
 	const TRANSIENT_PREFIX = 'accesstive_app_asset_';
 	const CACHE_GROUP_KEY  = 'accesstive_app_embed_payload';
+	const SCRIPT_PATCH_REV = 2;
 	const EMBED_CACHE_TTL  = HOUR_IN_SECONDS;
 	const ASSET_CACHE_TTL  = 43200; // 12 hours.
 
@@ -83,7 +84,7 @@ final class Accesstive_App_Embed {
 		}
 
 		$site_url  = Accesstive_App_Plugin::get_site_url();
-		$cache_key = self::CACHE_GROUP_KEY . '_' . md5( $app_url . '|' . $site_url . '|' . ACCESSTIVE_APP_VERSION );
+		$cache_key = self::CACHE_GROUP_KEY . '_' . md5( $app_url . '|' . $site_url . '|' . ACCESSTIVE_APP_VERSION . '|' . self::SCRIPT_PATCH_REV );
 
 		$cached = get_transient( $cache_key );
 		if ( is_array( $cached ) && ! empty( $cached['scripts'] ) ) {
@@ -454,19 +455,25 @@ final class Accesstive_App_Embed {
 	 * @return string
 	 */
 	private function patch_embed_script( $code ) {
-		$replacements = array(
-			'function Av(){if(typeof window>"u")return!1;try{return window.parent!==window}catch{return!0}}'
-				=> 'function Av(){return!0}',
-			'function Ei(){if(du)return du;try{const a=window.location.ancestorOrigins;if(a&&a.length>0)return a[0]}catch{}if(document.referrer)try{return new URL(document.referrer).origin}catch{return""}return""}'
-				=> 'function Ei(){return window.location.origin}',
-			'Qh=()=>location.pathname'
-				=> 'Qh=()=>"/"',
+		$patterns = array(
+			array(
+				'pattern'     => '/function ([A-Za-z_$][\w$]*)\(\)\{if\(typeof window>"u"\)return!1;try\{return window\.parent!==window\}catch\{return!0\}\}/',
+				'replacement' => 'function $1(){return!0}',
+			),
+			array(
+				'pattern'     => '/function ([A-Za-z_$][\w$]*)\(\)\{if\(([A-Za-z_$][\w$]*)\)return \2;try\{const a=window\.location\.ancestorOrigins;if\(a&&a\.length>0\)return a\[0\]\}catch\{\}if\(document\.referrer\)try\{return new URL\(document\.referrer\)\.origin\}catch\{return""\}return""\}/',
+				'replacement' => 'function $1(){return window.location.origin}',
+			),
+			array(
+				'pattern'     => '/([A-Za-z_$][\w$]*)=\(\)=>location\.pathname/',
+				'replacement' => '$1=()=>"/"',
+			),
 		);
 
-		foreach ( $replacements as $search => $replace ) {
-			$pos = strpos( $code, $search );
-			if ( false !== $pos ) {
-				$code = substr_replace( $code, $replace, $pos, strlen( $search ) );
+		foreach ( $patterns as $item ) {
+			$patched = preg_replace( $item['pattern'], $item['replacement'], $code, 1 );
+			if ( is_string( $patched ) && $patched !== $code ) {
+				$code = $patched;
 			}
 		}
 
